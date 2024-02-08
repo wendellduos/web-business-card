@@ -132,6 +132,7 @@ section {
 }
 
 h1 {
+  text-align: center;
   font-size: 1.7rem;
   line-height: 3.5rem;
 }
@@ -155,4 +156,52 @@ h1 {
   letter-spacing: 0.1px;
   line-height: 1.2rem;
   text-align: center;
+}
+
+@media screen and (max-width: 520px) {
+  html {
+    font-size: 16px;
+  }
+
+  #main-info {
+    padding: 0.5rem 0;
+  }
+
+  #description {
+    padding: 0 4rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  html {
+    font-size: 15px;
+  }
+
+  #main-info {
+    padding: 0.3rem 0;
+  }
+
+  #description {
+    padding: 0 3rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  html {
+    font-size: 14px;
+  }
+
+  #description {
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  #profile-pic-wrp {
+    padding: 0;
+  }
+
+  #socials {
+    padding: 0.3rem 0;
+  }
 }
