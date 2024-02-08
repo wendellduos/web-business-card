@@ -11,7 +11,9 @@ updtCardDisplay();
 
 function updtCardDisplay(delay) {
   if (cardFacingForwards) {
-    document.getElementById("back-card").style.display = "none";
+    setTimeout(() => {
+      document.getElementById("back-card").style.display = "none";
+    }, delay);
   } else {
     setTimeout(() => {
       document.getElementById("back-card").style.display = "block";
@@ -23,9 +25,10 @@ function updtCardDisplay(delay) {
 // gatilho para virar o cartão
 document.getElementById("dropdown-btn").addEventListener("click", () => {
   const card = document.querySelector("main");
-  const animDuration = 0.4;
+  const animDuration = 0.5;
+  const curve = "cubic-bezier( 0.78, 0.66, 0.17, 0.86 )";
 
-  card.style.animation = `flip ${animDuration}s linear 1 backwards`;
+  card.style.animation = `flip ${animDuration}s ${curve} 1 backwards`;
 
   // reseta animação após finalizar
   setTimeout(() => {
