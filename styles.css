@@ -210,6 +210,13 @@ h1 {
   line-height: 1.7rem;
 }
 
+.align-icon-text {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.3rem;
+}
+
 .tableish {
   padding: 1rem 0;
 }
