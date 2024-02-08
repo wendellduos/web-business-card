@@ -6,7 +6,6 @@ profilePicBackdrop.style.backgroundImage = `url('${profilePicPath}')`;
 
 // verifica o estado do cartão e atualiza visibilidade do verso
 let cardFacingForwards = true;
-
 updtCardDisplay();
 
 function updtCardDisplay(delay) {

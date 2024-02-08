@@ -13,6 +13,20 @@
   font-style: normal;
 }
 
+.thick {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.fancy {
+  background: -webkit-linear-gradient(15deg, var(--blue), var(--bluee));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .center-content {
   display: flex;
   align-items: center;
@@ -22,6 +36,8 @@
 :root {
   --dark: #333;
   --dim: #707070;
+  --blue: #1fb4ce;
+  --bluee: #4983ff;
 }
 
 * {
@@ -169,6 +185,50 @@ h1 {
   text-align: center;
 }
 
+/* verso do cartão */
+#back-card {
+  position: absolute;
+  top: 4.5rem;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 4.5rem);
+  padding: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: white;
+}
+
+#back-card ul {
+  list-style-type: none;
+}
+
+#back-card h2 {
+  line-height: 3rem;
+}
+
+#back-card p {
+  line-height: 1.7rem;
+}
+
+.tableish {
+  padding: 1rem 0;
+}
+
+.slice {
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+.slice:nth-child(1) {
+  padding: 1rem;
+  font-size: 3rem;
+}
+
+.slice:nth-child(2) a {
+  font-size: 0.8rem;
+  color: var(--dim);
+}
+
 @media screen and (max-width: 520px) {
   html {
     font-size: 16px;
@@ -205,9 +265,19 @@ h1 {
   #description {
     padding: 0 2rem;
   }
+
+  .slice {
+    width: 50%;
+    margin-bottom: 0.3rem;
+  }
+
+  .slice:nth-child(1) {
+    padding: 1rem;
+    font-size: 2rem;
+  }
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 371px) {
   #profile-pic-wrp {
     padding: 0;
   }
@@ -215,16 +285,17 @@ h1 {
   #socials {
     padding: 0.3rem 0;
   }
-}
 
-/* verso do cartão */
-#back-card {
-  position: absolute;
-  top: 4.5rem;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 4.5rem);
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  background-color: white;
+  .slice {
+    width: 50%;
+    margin-bottom: 0;
+  }
+
+  .slice:nth-child(1) {
+    padding: 0.3rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
 }
